@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        /* General styles for the body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            box-sizing: border-box;
+            color: white; /* White text for contrast */
+        }
+
+        /* Header and Navigation Bar */
+        nav {
+            background-color: #111;
+            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            justify-content: center; /* Center the navigation */
+            align-items: center;
+            animation: slideDown 0.5s ease-out; /* Add animation */
+        }
+
+        /* Toggle button for mobile view */
+        .togglebtn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 25px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .togglebtn span {
+            background-color: white;
+            height: 4px;
+            width: 100%;
+        }
+
+        /* Navigation links */
+        .navlinks {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .navlinks li {
+            margin: 0;
+        }
+
+        .navlinks li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navlinks li a:hover {
+            color: #f39c12;
+        }
+
+        /* Mobile view */
+        @media (max-width: 768px) {
+            .togglebtn {
+                display: flex;
+            }
+
+            .navlinks {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #111;
+                padding: 10px 20px;
+                border-radius: 5px;
+                width: 200px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navlinks.active {
+                display: flex;
+            }
+
+            .navlinks li a {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+        }
+
+        /* Main content styles */
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .projects-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px; /* Reduced the gap between boxes */
+            justify-items: center;
+        }
+
+        .project-box {
+            background-color: #5a2a2a; /* Dark maroon/brown */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+            height: 200px; /* Adjusted height for smaller boxes */
+            width: 250px; /* Adjusted width */
+            overflow: hidden;
+            color: white; /* Text color */
+        }
+
+        .project-box h3 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .project-box p {
+            font-size: 0.9rem;
+            color: #f0f0f0;
+            line-height: 1.4;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Styling for alternating boxes */
+        .project-box:nth-child(odd) {
+            background-color: #4a1f1f; /* Darker maroon/brown */
+        }
+
+        .project-box:nth-child(even) {
+            background-color: #6b2e2e; /* Lighter brown/maroon */
+        }
+
+        /* Animation for navigation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header with Navigation Bar -->
+    <nav>
+        <div class="togglebtn" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="heading">My Projects</h1>
+
+        <!-- Projects Box -->
+        <div class="projects-boxes">
+            <div class="project-box">
+                <h3>Crime Classification for Cyber Crime</h3>
+                <p>Developed a model to classify and analyze different types of cybercrimes using AI, assisting in the identification and prevention of cyber threats.</p>
+            </div>
+            <div class="project-box">
+                <h3>Automated Vulnerability Detection Tools</h3>
+                <p>Created automated tools that identify and report vulnerabilities in web applications, streamlining the bug detection and security assessment process.</p>
+            </div>
+            <div class="project-box">
+                <h3>Automated Website Vulnerability Checker</h3>
+                <p>Developed a tool that automatically scans websites for security vulnerabilities and reports potential risks, helping organizations secure their online assets.</p>
+            </div>
+            <div class="project-box">
+                <h3>Web Security Solutions by SecureLink (Ongoing)</h3>
+                <p>Providing comprehensive web security solutions tailored for small startups, including vulnerability assessments, penetration testing, and secure infrastructure design.</p>
+            </div>
+            <div class="project-box">
+                <h3>Secure Chatbots for Preventing Prompt Injection (LLMs)</h3>
+                <p>Developing AI-driven, secure chatbots that are resilient to prompt injection attacks, ensuring safe and intuitive user interactions in various domains.</p>
+            </div>
+            <div class="project-box">
+                <h3>Fake Project: Secure AI Model Defense</h3>
+                <p>Research and development of advanced security measures to defend AI models from adversarial attacks, focusing on ensuring model robustness in real-world scenarios.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to Toggle Navigation (For Mobile) -->
+    <script>
+        function toggleNav() {
+            const navLinks = document.querySelector('.navlinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
