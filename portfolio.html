@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthak's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <nav>
+            <div class="togglebtn" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="centered-container">
+        <h1 class="intro">Hi, I am <span>Sarthak</span></h1>
+        <h2 class="profession">Bug Hunter & Security Researcher</h2>
+        <p class="achievement">Achievements: <strong>50+ Bugs Reported, Including Critical Vulnerabilities</strong></p>
+        <div class="images">
+            <div class="image">
+                <img src="https://raw.githubusercontent.com/s4th9k/portfolio/refs/heads/main/Capture.PNG" alt="Bounty Reward" class="img-responsive">
+                <p>Bounty Reward</p>
+            </div>
+            <div class="image">
+                <img src="https://raw.githubusercontent.com/s4th9k/portfolio/refs/heads/main/linke2.jpg"Bug Hunting SWAG" class="img-responsive">
+                <p>Bug Hunting</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle navigation for mobile view
+        function toggleNav() {
+            const navLinks = document.querySelector('.navlinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
